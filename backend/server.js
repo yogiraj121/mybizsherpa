@@ -15,11 +15,11 @@ const PORT = process.env.PORT || 8000;
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      "http://localhost:3002",
       "https://mybizsherpa-hn97.vercel.app/",
+      "https://localhost:3000/"
     ],
-    credentials: true,
+    methods: ["GET", "POST"],
+        credentials: true,
   })
 );
 app.use(express.json());
