@@ -49,7 +49,7 @@ export default function Home() {
     fetchInsights();
   }, []);
 
-  const fetchInsights = async () => {
+  const fetchInsights = useCallback(async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/api/insights`);
       if (response.ok) {
@@ -59,7 +59,12 @@ export default function Home() {
     } catch (error) {
       console.error("Failed to fetch insights:", error);
     }
-  };
+  }, [API_BASE_URL]); // include dependencies like API_BASE_URL
+  
+  useEffect(() => {
+    fetchInsights();
+  }, [fetchInsights]);
+  
 
   const testConnection = async () => {
     try {
