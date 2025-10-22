@@ -43,7 +43,7 @@ export default function Home() {
   });
 
   const API_BASE_URL =
-    process.env.NEXT_PUBLIC_API_URL || "http://localhost:7000";
+    process.env.NEXT_PUBLIC_API_URL 
 
   useEffect(() => {
     fetchInsights();
