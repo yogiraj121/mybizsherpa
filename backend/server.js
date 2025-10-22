@@ -17,7 +17,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3002",
-      "https://your-vercel-app.vercel.app",
+      "https://mybizsherpa-hn97.vercel.app/",
     ],
     credentials: true,
   })
