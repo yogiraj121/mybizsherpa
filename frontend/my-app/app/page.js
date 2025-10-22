@@ -42,7 +42,7 @@ export default function Home() {
     role: "",
   });
 
-  const API_BASE_URL = "https://mybizsherpa-1.onrender.com"
+  const API_BASE_URL = NEXT_PUBLIC_API_URL
 
   useEffect(() => {
     fetchInsights();
