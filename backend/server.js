@@ -13,14 +13,7 @@ const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(
-  cors({
-    origin: [
-      "https://mybizsherpa-hn97.vercel.app/",
-      "https://localhost:3000/"
-    ],
-    methods: ["GET", "POST"],
-        credentials: true,
-  })
+  cors()
 );
 app.use(express.json());
 
